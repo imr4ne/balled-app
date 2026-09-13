@@ -1,0 +1,7 @@
+node_modules/
+.env
+balled.db
+balled.db-shm
+balled.db-wal
+uploads/*
+!uploads/.gitkeep

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>balled — Achète. Vends. Donne une seconde vie.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap header-row">
+    <div class="logo" id="logo-home">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bgrad" x1="20" y1="10" x2="85" y2="90" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#2f9186"/>
+            <stop offset="1" stop-color="#0f3934"/>
+          </linearGradient>
+        </defs>
+        <path d="M38 8C41 8 43.5 10.5 43.5 13.5V42C47 38.5 52 36 58 36C71 36 81 46.5 81 60C81 73.5 71 84 58 84C51.5 84 46 81.5 42 77.3V83H32.5V13.5C32.5 10.5 35 8 38 8Z" fill="url(#bgrad)"/>
+        <circle cx="58" cy="60" r="14" fill="#f7faf8"/>
+        <rect x="62" y="58" width="26" height="26" rx="4" transform="rotate(35 62 58)" fill="#6fc7b6"/>
+        <circle cx="70.5" cy="66.5" r="2.6" fill="#f7faf8"/>
+      </svg>
+      <span class="logo-word">balled</span>
+    </div>
+
+    <div class="searchbar">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search-input" type="text" placeholder="Rechercher une marque, un article…">
+    </div>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="fav-icon-btn" title="Favoris">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        <span class="badge" id="fav-count" style="display:none;">0</span>
+      </button>
+      <button class="icon-btn" id="msg-icon-btn" title="Messages">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </button>
+      <button class="btn btn-primary header-cta" id="sell-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>
+        <span>Vendre un article</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow-tag"><span class="dot">✓</span> Déjà 12 400 objets sauvés cette semaine</div>
+      <h1>Ta prochaine pièce préférée<br> a déjà <em>une histoire</em></h1>
+      <p class="lead">Achète, vends et donne une seconde vie à des vêtements, chaussures et accessoires uniques — en quelques minutes, entre particuliers.</p>
+      <div class="hero-actions">
+        <button class="btn btn-coral" id="hero-sell-btn">Déposer un article</button>
+        <button class="btn btn-ghost" style="border-color:rgba(255,255,255,.35);color:#fff;" id="hero-browse-btn">Explorer le catalogue</button>
+      </div>
+      <div class="hero-stats">
+        <div><b>2,1 M</b><span>articles en ligne</span></div>
+        <div><b>860 k</b><span>membres actifs</span></div>
+        <div><b>4,8/5</b><span>satisfaction acheteurs</span></div>
+        <div><b>100%</b><span>paiement à la livraison</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="float-card fc1"><img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=300&h=300&fit=crop" alt=""><div class="fc-title">Blouson denim</div><div class="fc-price">180 DH</div></div>
+      <div class="float-card fc2"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=300&h=300&fit=crop" alt=""><div class="fc-title">Sneakers blanches</div><div class="fc-price">260 DH</div></div>
+      <div class="float-card fc3"><img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=300&fit=crop" alt=""><div class="fc-title">Sac cuir camel</div><div class="fc-price">320 DH</div></div>
+    </div>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="#f7faf8" d="M0,32 C240,60 480,0 720,18 C960,36 1200,54 1440,26 L1440,60 L0,60 Z"/></svg>
+</section>
+
+<main class="wrap">
+  <div class="cat-strip">
+    <div class="cat-scroll" id="cat-scroll"></div>
+  </div>
+
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Sélectionné pour toi</h2>
+      <p>Basé sur les nouveautés et les articles les plus enregistrés</p>
+    </div>
+  </div>
+
+  <div class="filter-row" id="filter-row"></div>
+
+  <div class="grid" id="product-grid"></div>
+  <div class="load-more-wrap">
+    <button class="btn btn-ghost" id="load-more-btn">Voir plus d'articles</button>
+  </div>
+</main>
+
+<section class="how">
+  <div class="wrap">
+    <h2 class="section-title">Comment ça marche</h2>
+    <div class="how-grid">
+      <div class="how-item">
+        <div class="how-num">1</div>
+        <div><h3>Dépose ton article</h3><p>Prends quelques photos, ajoute une description et fixe ton prix en moins de 5 minutes.</p></div>
+      </div>
+      <div class="how-item">
+        <div class="how-num">2</div>
+        <div><h3>Échange et acompte</h3><p>Réponds aux questions, accepte une offre. L'acheteur verse un petit acompte pour confirmer la commande — il te reste acquis en cas de refus à la livraison.</p></div>
+      </div>
+      <div class="how-item">
+        <div class="how-num">3</div>
+        <div><h3>Livraison et paiement à la réception</h3><p>L'acheteur paie en espèces ou par carte directement au livreur, à la réception du colis — toi tu es réglé juste après.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="cta-banner">
+    <div>
+      <h2>Ton dressing a de la valeur.</h2>
+      <p>Des milliers de vêtements dorment dans les placards partout au Maroc. Donne-leur une seconde vie et gagne un peu d'argent au passage.</p>
+    </div>
+    <button class="btn btn-coral" id="cta-sell-btn">Commencer à vendre</button>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:14px;">
+        <svg viewBox="0 0 100 100" width="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M38 8C41 8 43.5 10.5 43.5 13.5V42C47 38.5 52 36 58 36C71 36 81 46.5 81 60C81 73.5 71 84 58 84C51.5 84 46 81.5 42 77.3V83H32.5V13.5C32.5 10.5 35 8 38 8Z" fill="#6fc7b6"/>
+          <circle cx="58" cy="60" r="14" fill="#0f3934"/>
+        </svg>
+        <span class="logo-word" style="color:#fff;">balled</span>
+      </div>
+      <p>Achète. Vends. Donne une seconde vie. La marketplace de la mode d'occasion entre particuliers.</p>
+    </div>
+    <div><h4>Balled</h4><ul><li><a href="#">À propos</a></li><li><a href="#">Carrières</a></li><li><a href="#">Presse</a></li><li><a href="#">Impact</a></li></ul></div>
+    <div><h4>Aide</h4><ul><li><a href="#">Comment vendre</a></li><li><a href="#">Comment acheter</a></li><li><a href="#">Livraison</a></li><li><a href="#">Paiement à la livraison</a></li><li><a href="#">Acomptes et frais de service</a></li></ul></div>
+    <div><h4>Suivre</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li><li><a href="#">Pinterest</a></li></ul></div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 balled. Tous droits réservés.</span>
+    <span>Conditions générales · Confidentialité · Cookies</span>
+  </div>
+</footer>
+
+<!-- ITEM DETAIL MODAL -->
+<div class="overlay" id="item-overlay">
+  <div class="modal" id="item-modal-content"></div>
+</div>
+
+<!-- SELL MODAL -->
+<div class="overlay" id="sell-overlay">
+  <div class="modal">
+    <button class="modal-close" id="sell-close">✕</button>
+    <form class="sell-form" id="sell-form">
+      <h2>Déposer un nouvel article</h2>
+      <p>Renseigne quelques informations — il sera visible immédiatement dans le catalogue.</p>
+
+      <div class="upload-box">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5-9 9"/></svg>
+        <div>Une photo aléatoire sera utilisée pour cette démo</div>
+      </div>
+
+      <div class="form-row">
+        <label>Titre de l'article</label>
+        <input type="text" id="f-title" placeholder="Ex. Pull en laine mérinos" required>
+      </div>
+
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label>Marque</label>
+          <input type="text" id="f-brand" placeholder="Ex. Sézane" required>
+        </div>
+        <div class="form-row">
+          <label>Prix (DH)</label>
+          <input type="number" id="f-price" min="1" placeholder="Ex. 250" required>
+        </div>
+      </div>
+
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label>Catégorie</label>
+          <select id="f-category">
+            <option>Femme</option><option>Homme</option><option>Enfant</option>
+            <option>Chaussures</option><option>Accessoires</option><option>Maison</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>État</label>
+          <select id="f-condition">
+            <option>Neuf avec étiquette</option><option>Très bon état</option>
+            <option>Bon état</option><option>Satisfaisant</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>Taille</label>
+        <input type="text" id="f-size" placeholder="Ex. M, 38, 41...">
+      </div>
+
+      <div class="form-row">
+        <label>Description</label>
+        <textarea id="f-desc" rows="3" placeholder="Décris la matière, la coupe, les éventuels défauts…"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:6px;">Publier l'article</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
